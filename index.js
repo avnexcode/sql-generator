@@ -18,7 +18,7 @@ const main = (tableName, entitiesTable, insertCount, inputGroup) => {
             values += "("
             asd.forEach((item, j) => {
                 const inputElements = inputGroup[i].children[0].children[j].children[1].children[0]
-                // !inputElements.value && alert("isi njeng")
+                // !inputElements.value && false
                 j !== asd.length - 1 ? values += `'${inputElements.value}',` : values += `'${inputElements.value}'`
             })
             i !== insertCount - 1 ? values += '),' : values += ')'
@@ -78,6 +78,7 @@ const copyText = () => {
 copyButton.addEventListener('click', e => {
     copyText()
 })
+
 clearButton.addEventListener('click', e => {
     sqlResult.innerHTML = null
     insertValue.innerHTML = null
