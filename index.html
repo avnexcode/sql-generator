@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="./index.js" defer></script>
+    <style>
+        .flex {
+            display: flex;
+        }
+
+        .flex-col {
+            flex-direction: column;
+        }
+
+        .gap-1 {
+            gap: 5px;
+        }
+
+        .gap-2 {
+            gap: 30px;
+        }
+
+        .flex-wrap {
+            flex-wrap: wrap;
+        }
+
+        .table-input {
+            border: 1.5px solid black;
+            padding: 3px;
+        }
+
+        .justify-center {
+            justify-content: center;
+        }
+
+        .items-center {
+            align-items: center;
+        }
+
+        .place-center {
+            justify-content: center;
+            align-items: center;
+        }
+
+        pre {
+            background-color: #f4f4f4;
+            padding: 10px;
+            border: 1px solid #ddd;
+            white-space: pre-wrap;
+        }
+    </style>
+</head>
+
+<body>
+    <form action="" id="form" class="flex gap-2 flex-col">
+        <div class="flex flex-col gap-1">
+            <label for="table">Nama Tabel</label>
+            <input type="text" name="table" id="table" value="users">
+        </div>
+        <div class="flex flex-col gap-1">
+            <label for="">Entitas Dalam Table (Pisahkan dengan tanda ',')</label>
+            <input type="text" id="entity" value="id, username, email, password">
+        </div>
+        <div class="flex flex-col gap-1">
+            <label for="insertCount">Jumlah Data Yang di Masukkan</label>
+            <input type="text" id="insertCount" value="2">
+            <button type="button" id="generate-insert-value-button">Generate</button>
+
+            <div id="insert-value" class="flex flex-wrap gap-1 place-center">
+
+            </div>
+        </div>
+        <div class="flex flex-col gap-1">
+            <button>Submit</button>
+        </div>
+    </form>
+    <div id="sql-result"></div>
+    <button type="button" id="copy-button">Copy</button>
+    <button type="button" id="clear-button">Clear</button>
+</body>
+
+</html>
