@@ -56,25 +56,33 @@
 
 <body>
     <form action="" id="form" class="flex gap-2 flex-col">
+        <!-- 0 -->
         <div class="flex flex-col gap-1">
             <label for="table">Nama Tabel</label>
             <input type="text" name="table" id="table" value="users">
         </div>
+        <!-- 1 -->
         <div class="flex flex-col gap-1">
             <label for="">Entitas Dalam Table (Pisahkan dengan tanda ',')</label>
             <input type="text" id="entity" value="id, username, email, password">
         </div>
+        <!-- 2 -->
         <div class="flex flex-col gap-1">
+            <!-- 0 -->
             <label for="insertCount">Jumlah Data Yang di Masukkan</label>
+            <!-- 1 -->
             <input type="text" id="insertCount" value="2">
+            <!-- 2 -->
             <button type="button" id="generate-insert-value-button">Generate</button>
-
+            <!-- 3 -->
             <div id="insert-value" class="flex flex-wrap gap-1 place-center">
 
             </div>
+
         </div>
+        <!-- 3 -->
         <div class="flex flex-col gap-1">
-            <button>Submit</button>
+            <input type="submit" value="Submit">
         </div>
     </form>
     <div id="sql-result"></div>

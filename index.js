@@ -9,6 +9,7 @@ const copyButton = document.querySelector("#copy-button")
 const clearButton = document.querySelector('#clear-button')
 
 const splitString = (string, gap) => string.split(gap)
+
 const main = (tableName, entitiesTable, insertCount, inputGroup) => {
     if (inputGroup?.length > 0) {
         let entity = "", values = ""
@@ -64,6 +65,7 @@ formInput.addEventListener('submit', e => {
     main(tableInput.value, entityInput.value, parseInt(insertCount.value), inputGroup)
 })
 
+// ! - End
 const copyText = () => {
     const text = sqlResult.children[0].innerText;
     const textarea = document.createElement("textarea");
